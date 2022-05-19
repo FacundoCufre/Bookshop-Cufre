@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/bookshop-cufre/static/css/main.5bad85b9.css",
-    "main.js": "/bookshop-cufre/static/js/main.512da7f0.js",
-    "static/js/787.814d35ab.chunk.js": "/bookshop-cufre/static/js/787.814d35ab.chunk.js",
+    "main.css": "/bookshop-cufre/static/css/main.8b87e7c2.css",
+    "main.js": "/bookshop-cufre/static/js/main.c1d7c8c7.js",
     "index.html": "/bookshop-cufre/index.html",
-    "main.5bad85b9.css.map": "/bookshop-cufre/static/css/main.5bad85b9.css.map",
-    "main.512da7f0.js.map": "/bookshop-cufre/static/js/main.512da7f0.js.map",
-    "787.814d35ab.chunk.js.map": "/bookshop-cufre/static/js/787.814d35ab.chunk.js.map"
+    "main.8b87e7c2.css.map": "/bookshop-cufre/static/css/main.8b87e7c2.css.map",
+    "main.c1d7c8c7.js.map": "/bookshop-cufre/static/js/main.c1d7c8c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bad85b9.css",
-    "static/js/main.512da7f0.js"
+    "static/css/main.8b87e7c2.css",
+    "static/js/main.c1d7c8c7.js"
   ]
 }
