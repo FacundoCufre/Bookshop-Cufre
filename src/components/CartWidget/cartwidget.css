@@ -1,0 +1,15 @@
+.carticon{
+    height: 50px;
+    width: 50px;
+    color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    border: 1px solid #2c7d74;
+}
+.carticon:hover{
+    border: 1px solid #96e7bf;
+    color: #96e7bf;
+}
