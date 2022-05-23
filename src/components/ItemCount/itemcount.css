@@ -1,0 +1,54 @@
+.contador{
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50% 50%;
+    margin-top: 30px;
+}
+
+.suma, .resta, .total, .agregar{
+    border: solid 1px #96e7bf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2c7d74;
+    transition: all .1s;
+    background-color: rgb(240, 255, 244);
+    font-size: 30px;
+    
+}
+
+.suma:hover, .resta:hover, .agregar:hover{
+    cursor: pointer;
+}
+
+.suma:active, .resta:active, .agregar:active{
+    background-color: #96e7bf;
+}
+
+.suma{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    border-bottom: none;
+    
+}
+
+.resta{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-bottom: none;
+}
+
+.total{
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.agregar{
+    grid-column: 1/4;
+    grid-row: 2/3;
+}

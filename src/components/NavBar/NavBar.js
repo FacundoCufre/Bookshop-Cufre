@@ -6,9 +6,9 @@ const NavBar = ()=> {
     <section className="navbar">
       <div className="brand">Bookshop</div>
       <div className="links">
-        <div className='categoria'><span>novelas</span></div>
-        <div className='categoria'><span>mangas</span></div>
-        <div className='categoria'><span>comics</span></div>
+        <a href="#Novelas" className='categoria'><span>Novelas</span></a>
+        <a href="#Mangas" className='categoria'><span>Mangas</span></a>
+        <a href="#Comics" className='categoria'><span>Comics</span></a>
       </div>
       <CartWidget/>
     </section>
