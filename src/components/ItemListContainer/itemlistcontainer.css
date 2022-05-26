@@ -1,20 +1,33 @@
 .container{
-    margin-top: 50px;
-    width: 100%;
-    border-top: 1px solid #2c7d74;
-    border-bottom: 1px solid #2c7d74;
+    height: 100%;
+    margin: 0;
+    margin-bottom: 5px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #373739;
 }
 
-h2{
+.titulos{
+    margin-top: 20px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulos h2{
     font-size: 30px;
-    color: #2c7d74;
+    color: #d35349;
+    margin: 0;
 }
 
-h3{
-    font-size: 20px;
-    color: #96e7bf;
+.titulos h3{
+    font-size: 16px;
+    color: #e7a8a7;
+    margin: 0;
 }

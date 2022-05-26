@@ -1,0 +1,23 @@
+.decoracion{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #373739;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.decoracion-todos{
+    background-image: url(https://external-preview.redd.it/kS7FNx5H0-ucg2jxsByi2vMNOwqo0VC_Y8ojHsLZqvE.jpg?auto=webp&s=fd2a95a9e9cee402c7246691f93c3059ac88c13f);
+}
+
+.decoracion-top{
+    background-image: url(https://i.pinimg.com/originals/18/7a/d5/187ad502a86edaa59d84b6353f2aae88.png);
+}
+
+.decoracion-novedades{
+    background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/copesa/UW7D5VNNF5GE7CX4NBUNEIJYAM.jpg);
+}

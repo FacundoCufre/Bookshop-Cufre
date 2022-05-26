@@ -1,16 +1,27 @@
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemCount from './components/ItemCount/ItemCount';
+import ImgDecorative from './components/ImgDecorative/ImgDecorative';
+import './App.css'
 
 function App() {
   return (
     <>
       <NavBar/>
-      <ItemCount stock={7}/>
-      <ItemListContainer titulo={`Todos nuestros productos`} subtitulo={`No hay productos en este momento :(`}/>
-      <ItemListContainer titulo={`Novelas`} subtitulo={`Aún no tenemos novelas :(`}/>
-      <ItemListContainer titulo={`Mangas`} subtitulo={`Aún no tenemos mangas:(`}/>
-      <ItemListContainer titulo={`Comics`} subtitulo={`Aún no tenemos comics :(`}/>
+
+      <section className='portal'>
+        <ItemListContainer titulo={`Mangas`} subtitulo={`Todos nuestros mangas`}/>
+        <ImgDecorative tipo='decoracion decoracion-todos'/>
+      </section>
+
+      <section className='portal'>
+        <ImgDecorative tipo='decoracion decoracion-top'/>
+        <ItemListContainer titulo={`Top`} subtitulo={`Los más vendidos`}/>
+      </section>
+
+      <section className='portal'>
+        <ItemListContainer titulo={`Novedades`} subtitulo={`Últimas novedades`}/>
+        <ImgDecorative tipo='decoracion decoracion-novedades'/>
+      </section>
     </>
   );
 }
