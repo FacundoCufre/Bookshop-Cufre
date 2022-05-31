@@ -1,10 +1,10 @@
-import { SportsHockeyOutlined } from "@mui/icons-material";
+import productos from "../../utils/productosMock"
 import { useState, useEffect } from "react";
-import Item from '../Item/Item'
-import './itemlist.css'
-import productos from "../../utils/productosMock";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import './itemdetailcontainer.css'
 
-const ItemList = ()=> {
+
+const ItemDetailContainer = () =>{
     const [products, setProducts] = useState([])
     const getProducts = ()=> {
         return new Promise( (resolve, reject)=>{
@@ -20,19 +20,21 @@ const ItemList = ()=> {
             setProducts(response)
         })
     })
+
     return(
-        <section className="itemlist">
-        {
-        products.map( ({titulo, volumen, id, precio, genero, stock})=>{
-            const clase = `item ${genero}` 
+        <section className="item-detail-container">
+            {
+            products.map( ({titulo, volumen, genero, autor, id})=>{
                 return(
-                    <Item titulo={titulo} volumen={volumen} id={id} precio={precio} clase={clase} cant={stock}/>
+                    <ItemDetail titulo={titulo} volumen={volumen} autor={autor} genero={genero} id={id} />
                 )
             }
         )
         }
+
+
         </section>
     )
 }
 
-export default ItemList
+export default ItemDetailContainer

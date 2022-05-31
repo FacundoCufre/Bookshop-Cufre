@@ -1,0 +1,18 @@
+.item-detail{
+    height: 100%;
+    width: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    list-style: none;
+}

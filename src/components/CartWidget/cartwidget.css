@@ -7,9 +7,9 @@
     justify-content: center;
     align-items: center;
     margin-right: 50px;
-    border: 1px solid #2c7d74;
+    border: 1px solid aliceblue;
 }
 .carticon:hover{
-    border: 1px solid #96e7bf;
-    color: #96e7bf;
+    border: 1px solid #f5886a;
+    color: #f5886a;
 }

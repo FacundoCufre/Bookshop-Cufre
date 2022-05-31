@@ -1,9 +1,11 @@
-.itemlist{
+.item-detail-container{
+    height: 160px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    height: 400px;
     align-items: center;
     flex-wrap: nowrap;
-    width: 100%;
     overflow-x: scroll;
+    background-color: #e79696;
+    list-style: none;
 }
