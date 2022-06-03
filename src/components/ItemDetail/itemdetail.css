@@ -1,18 +1,27 @@
 .item-detail{
     height: 100%;
-    width: 280px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 100%;
     flex: 0 0 auto;
     border-left: 1px solid black;
     border-right: 1px solid black;
+    display: flex;
+    flex-direction: row;
 }
-ul{
+.item-detail ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 80%;
+    width: 65%;
+    height: 100%;
     list-style: none;
+    margin: 0;
+    font-size: 30px;
+}
+
+.item-detail .imagen{
+    height: 100%;
+    width: 35%;
+    background-size: cover;
+    background-position: center;
 }

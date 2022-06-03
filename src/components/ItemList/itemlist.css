@@ -1,7 +1,7 @@
 .itemlist{
     display: flex;
     flex-direction: row;
-    height: 400px;
+    height: calc(100% - 120px);
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;

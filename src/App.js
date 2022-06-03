@@ -1,28 +1,22 @@
-import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ImgDecorative from './components/ImgDecorative/ImgDecorative';
-import './App.css'
+import NavBar from './components/NavBar/NavBar';
+import './App.css';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './pages/Home'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar/>
-
-      <section className='portal'>
-        <ItemListContainer titulo={`Mangas`} subtitulo={`Todos nuestros mangas`}/>
-        <ImgDecorative tipo='decoracion decoracion-todos'/>
-      </section>
-
-      <section className='portal'>
-        <ImgDecorative tipo='decoracion decoracion-top'/>
-        <ItemListContainer titulo={`Top`} subtitulo={`Los más vendidos`}/>
-      </section>
-
-      <section className='portal'>
-        <ItemListContainer titulo={`Novedades`} subtitulo={`Últimas novedades`}/>
-        <ImgDecorative tipo='decoracion decoracion-novedades'/>
-      </section>
-    </>
+      <Routes>
+        <Route path='/bookshop-cufre' element={<Home/>} />
+        <Route exact path="/producto/:id" element={<ItemDetailContainer/>}/>
+        <Route exact path="/producto/:category" element={<ItemListContainer/>}/>
+      </Routes>
+      
+    </BrowserRouter>
   );
 }
 

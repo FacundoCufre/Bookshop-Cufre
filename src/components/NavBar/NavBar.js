@@ -1,14 +1,15 @@
 import './navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom';
 
 const NavBar = ()=> {
   return (
     <section className="navbar">
-      <div className="brand">MangaShop</div>
+      <Link to={'/bookshop-cufre'} className="brand">MangaShop</Link>
       <div className="links">
-        <a href="#Mangas" className='categoria'><span>Todos</span></a>
-        <a href="#Top" className='categoria'><span>Top ventas</span></a>
-        <a href="#Novedades" className='categoria'><span>Novedades</span></a>
+        <Link to={`producto/mangas`} className='categoria'><span>Todos</span></Link>
+        <Link to={`productos/top`} className='categoria'><span>Top ventas</span></Link>
+        <Link to={`productos/novedades`} className='categoria'><span>Novedades</span></Link>
       </div>
       <CartWidget/>
     </section>

@@ -1,10 +1,10 @@
-import { SportsHockeyOutlined } from "@mui/icons-material";
+
 import { useState, useEffect } from "react";
 import Item from '../Item/Item'
 import './itemlist.css'
 import productos from "../../utils/productosMock";
 
-const ItemList = ()=> {
+const ItemList = ({llave})=> {
     const [products, setProducts] = useState([])
     const getProducts = ()=> {
         return new Promise( (resolve, reject)=>{
@@ -21,7 +21,7 @@ const ItemList = ()=> {
         })
     })
     return(
-        <section className="itemlist">
+        <section className="itemlist" key={llave}>
         {
         products.map( ({titulo, volumen, id, precio, genero, stock})=>{
             const clase = `item ${genero}` 

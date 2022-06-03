@@ -1,16 +1,18 @@
 import './itemlistcontainer.css'
 import ItemList from '../ItemList/ItemList'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import { useParams } from 'react-router-dom';
 
-const ItemListContainer = ({titulo, subtitulo})=> {
+
+
+const ItemListContainer = ()=> {
+  const { category } = useParams()
   return (
-    <section className="container" id={titulo}>
+    <section className="container" id={category} key={category}>
       <div className='titulos'>
-        <h2>{titulo}</h2>
-        <h3>{subtitulo}</h3>
+        <h2>{category}</h2>
+        <h3>Todos nuestros: {category}</h3>
       </div>
-      <ItemList/>
-      <ItemDetailContainer/>
+      <ItemList llave={`${category}`}/>
     </section>
   );
 }
