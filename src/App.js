@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/bookshop-cufre' element={<Home/>} />
         <Route exact path="/producto/:id" element={<ItemDetailContainer/>}/>
-        <Route exact path="/producto/:category" element={<ItemListContainer/>}/>
+        <Route exact path="/productos/:category" element={<ItemListContainer/>}/>
       </Routes>
       
     </BrowserRouter>

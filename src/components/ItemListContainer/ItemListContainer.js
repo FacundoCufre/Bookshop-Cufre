@@ -3,7 +3,6 @@ import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom';
 
 
-
 const ItemListContainer = ()=> {
   const { category } = useParams()
   return (
