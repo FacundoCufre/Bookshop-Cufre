@@ -2,11 +2,11 @@
   box-sizing: border-box;
 }
 body{
-  background-color: gray;
+  background-color: #fffffe;
 }
 
 .portal{
-  height: 100vh;
+  height: calc(100vh - 70px);
   width: 100%;
   display: flex;
   flex-direction: row;

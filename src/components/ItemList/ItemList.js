@@ -23,10 +23,10 @@ const ItemList = ({llave})=> {
     return(
         <section className="itemlist" key={llave}>
         {
-        products.map( ({titulo, volumen, id, precio, genero, stock})=>{
+        products.map( ({titulo, volumen, id, precio, genero, stock, imagen})=>{
             const clase = `item ${genero}` 
                 return(
-                    <Item titulo={titulo} volumen={volumen} id={id} precio={precio} clase={clase} cant={stock}/>
+                    <Item titulo={titulo} volumen={volumen} id={id} precio={precio} clase={clase} cant={stock} imagen={imagen}/>
                 )
             }
         )

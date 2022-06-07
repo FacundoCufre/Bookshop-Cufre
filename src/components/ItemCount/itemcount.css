@@ -7,11 +7,11 @@
 }
 
 .suma, .resta, .total, .agregar{
-    border: solid 1px #e79696;
+    border: solid 1px #8f7ebe;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #7d2c2c;
+    color: #00214d;
     transition: all .1s;
     background-color: rgb(255, 240, 240);
     font-size: 15px;
@@ -50,4 +50,5 @@
 .agregar{
     grid-column: 1/4;
     grid-row: 2/3;
+    border-bottom: none;
 }

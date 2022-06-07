@@ -1,15 +1,16 @@
 .carticon{
-    height: 50px;
+    height: 100%;
     width: 50px;
-    color: aliceblue;
-    border-radius: 50%;
+    color: #3a3531;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
-    border: 1px solid aliceblue;
+    background-color: #cf5351;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 50% 82%, 0 100%);
+    font-size: 20px;
 }
 .carticon:hover{
-    border: 1px solid #f5886a;
-    color: #f5886a;
+    border: 1px solid #e0295f;
+    background-color: #e0295f;
 }

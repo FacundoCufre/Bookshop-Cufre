@@ -2,12 +2,12 @@
     height: 100%;
     margin: 0;
     margin-bottom: 5px;
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #373739;
+    background-color: #fffffe;
 }
 
 .titulos{
