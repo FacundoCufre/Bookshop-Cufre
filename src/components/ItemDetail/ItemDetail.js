@@ -1,6 +1,10 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 import './itemdetail.css'
 
-const ItemDetail = ({titulo, volumen, genero, autor, id, imagen})=> {
+const ItemDetail = ({titulo, volumen, genero, autor, id, imagen, stock})=> {
+  const [showButton, setShowButton] = useState(false)
   return (
     <section className='item-detail' key={id}>
       <ul>
@@ -8,6 +12,12 @@ const ItemDetail = ({titulo, volumen, genero, autor, id, imagen})=> {
           <li><span>Volumen {volumen}</span></li>
           <li><span>Genero: {genero}</span></li>
           <li><span>Autor: {autor}</span></li>
+          {!showButton ?
+          <ItemCount stock={stock} setShowButton={setShowButton}/>
+          :
+          <Link className='fin-compra' to={`/cart`} ><span>Comprar</span></Link>}
+          
+          
       </ul>
       <div className='imagen' style={{backgroundImage:`URL(${imagen})`}}>
       </div>

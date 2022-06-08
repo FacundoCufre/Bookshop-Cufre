@@ -5,7 +5,7 @@
     border-left: 1px solid black;
     border-right: 1px solid black;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 .item-detail ul{
     display: flex;
@@ -18,10 +18,23 @@
     margin: 0;
     font-size: 30px;
 }
+.item-detail ul li{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
 .item-detail .imagen{
     height: 100%;
     width: 35%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
+}
+
+.fin-compra{
+    height: 20%;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    color: #cf5351;
 }
