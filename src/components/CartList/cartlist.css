@@ -1,0 +1,34 @@
+.carrito{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    background-color: #cf5351;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto-en-carrito{
+    height: 200px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.producto-en-carrito .imagen{
+    height: 100%;
+    width: 20%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.producto-en-carrito .info{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

@@ -1,11 +1,14 @@
 import './cartwidget.css'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
 
 const CartWidget = ()=> {
   return (
-    <div className='carticon'>
-        <ShoppingCartIcon/>
-    </div>
+    <Link to={'carrito'}>
+      <div className='carticon'>
+          <ShoppingCartIcon fontSize='large'/>
+      </div>
+    </Link>
   );
 }
 

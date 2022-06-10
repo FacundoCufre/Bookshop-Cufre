@@ -6,7 +6,8 @@
     flex-direction: row;
     justify-content: space-between; 
     align-items: center;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 5;
 }
 
@@ -17,7 +18,7 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    color: #cf5351;
+    color: #cc3331;
     text-decoration: none;
     font-weight: 700;
     transition: all .3s;
@@ -33,6 +34,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    font-weight: 500;
 }
 
 .categoria{

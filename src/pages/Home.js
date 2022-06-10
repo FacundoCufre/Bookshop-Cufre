@@ -1,10 +1,11 @@
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-import ImgDecorative from '../components/ImgDecorative/ImgDecorative';
+import InitialInfo from '../components/InitialInfo/InitialInfo';
 
 
 const Home = () => {
     return(
         <>
+            <InitialInfo/>
             <section className='portal'>
                 <ItemListContainer category={`mangas`}/>
             </section>
