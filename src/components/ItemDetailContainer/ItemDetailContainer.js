@@ -24,11 +24,7 @@ const ItemDetailContainer = () =>{
         })
     return(
         <section className="item-detail-container">
-<<<<<<< HEAD
                     <ItemDetail titulo={products.titulo} volumen={products.volumen} autor={products.autor} genero={products.genero} id={products.id} imagen={products.imagen} precio={products.precio} />
-=======
-                    <ItemDetail titulo={products.titulo} volumen={products.volumen} autor={products.autor} genero={products.genero} id={products.id} imagen={products.imagen} stock={products.stock} />
->>>>>>> 83f8ffd57fbe69c96e6fde2ff0b77dbf723a4308
         </section>
     )
 }
