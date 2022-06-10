@@ -11,9 +11,17 @@ const CartProvider = ({children}) => {
         !isInCart && setCartListItems(cartListItems => [...cartListItems, product])     
     }
 
+    const [ countQuantity, setCountQuantity] = useState([])
+
+    const addQuantity = (quant) => {
+        setCountQuantity(countQuantity => [...countQuantity, quant])
+    }
+
     const data = {
         cartListItems,
-        addProductToCart
+        countQuantity,
+        addProductToCart,
+        addQuantity,
     }
 
     return(

@@ -3,15 +3,14 @@ import CartContext from '../Context/CartContext'
 import { useContext } from 'react'
 
 const CartLIst = ()=> {
-    const { cartListItems } = useContext(CartContext)
-    console.log(cartListItems)
+    const { cartListItems, countQuantity } = useContext(CartContext)
     return(
         <section className='carrito'>
             {cartListItems.length === 0 && 
                 <span>NO HAY PRODUCTOS EN EL CARRITO</span>
             }
             {cartListItems.map( ( item ) => {
-                console.log('hola', item.precio)
+                
                 return(
                     <div className='producto-en-carrito' key={item.id}>
                         <div className='imagen' style={{backgroundImage:`URL(${item.imagen})`}}></div>
