@@ -10,6 +10,9 @@ const CartLIst = ()=> {
                 <span>NO HAY PRODUCTOS EN EL CARRITO</span>
             }
             {cartListItems.map( ( item ) => {
+                countQuantity.map((canti) => {
+                   console.log(canti.count)
+                })
                 
                 return(
                     <div className='producto-en-carrito' key={item.id}>

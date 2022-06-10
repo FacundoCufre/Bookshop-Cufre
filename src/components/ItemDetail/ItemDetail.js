@@ -16,7 +16,7 @@ const ItemDetail = ({titulo, volumen, genero, stock, autor, id, imagen, precio})
           <li><span>Genero: {genero}</span></li>
           <li><span>Autor: {autor}</span></li>
           {!showButton ?
-          <ItemCount stock={stock} setShowButton={setShowButton}/>
+          <ItemCount stock={stock} setShowButton={setShowButton} id={id}/>
           :
           <Link onClick={() => addProductToCart({titulo, volumen, genero, autor, id, imagen, precio})} className='fin-compra' to={`/carrito`} ><span>Agregar al carro</span></Link>}
           
