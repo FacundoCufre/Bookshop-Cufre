@@ -6,22 +6,16 @@ const CartProvider = ({children}) => {
     const [cartListItems, setCartListItems] = useState([])
 
     const addProductToCart = (product) => {
+        console.log('lista antes',cartListItems) 
         let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
-
-        !isInCart && setCartListItems(cartListItems => [...cartListItems, product])     
+        !isInCart && setCartListItems(cartListItems => [...cartListItems, product])  
     }
-
-    const [ countQuantity, setCountQuantity] = useState([])
-
-    const addQuantity = (quant) => {
-        setCountQuantity(countQuantity => [...countQuantity, quant])
-    }
+ console.log (cartListItems)
+    
 
     const data = {
         cartListItems,
-        countQuantity,
         addProductToCart,
-        addQuantity,
     }
 
     return(

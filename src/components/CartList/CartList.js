@@ -10,23 +10,20 @@ const CartLIst = ()=> {
                 <span>NO HAY PRODUCTOS EN EL CARRITO</span>
             }
             {cartListItems.map( ( item ) => {
-                countQuantity.map((canti) => {
-                   console.log(canti.count)
+                   return(
+                        <div className='producto-en-carrito' key={item.id}>
+                            <div className='imagen' style={{backgroundImage:`URL(${item.imagen})`}}></div>
+                            <div className='info'>
+                                    <span>{item.titulo}</span>
+                                    <span>{item.volumen}</span>
+                                    <span>{item.genero}</span>
+                                    <span>{item.autor}</span>
+                                    <span>{item.precio}</span>
+                                    <span>{item.countQuantity}</span>
+                            </div>
+                        </div> 
+                    )
                 })
-                
-                return(
-                    <div className='producto-en-carrito' key={item.id}>
-                        <div className='imagen' style={{backgroundImage:`URL(${item.imagen})`}}></div>
-                        <div className='info'>
-                                <span>{item.titulo}</span>
-                                <span>{item.volumen}</span>
-                                <span>{item.genero}</span>
-                                <span>{item.autor}</span>
-                                <span>{item.precio}</span>
-                        </div>
-                    </div> 
-                )
-            })
             }
         </section>
     )

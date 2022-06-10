@@ -6,8 +6,9 @@ import CartContext from '../Context/CartContext';
 import { useContext } from 'react';
 
 const ItemDetail = ({titulo, volumen, genero, stock, autor, id, imagen, precio})=> {
-  const { addProductToCart } = useContext(CartContext)
+  const { addProductToCart, addQuantity } = useContext(CartContext)
   const [showButton, setShowButton] = useState(false)
+  const [countQuantity, setCountQuantity] = useState([])
   return (
     <section className='item-detail' key={id}>
       <ul>
@@ -16,9 +17,9 @@ const ItemDetail = ({titulo, volumen, genero, stock, autor, id, imagen, precio})
           <li><span>Genero: {genero}</span></li>
           <li><span>Autor: {autor}</span></li>
           {!showButton ?
-          <ItemCount stock={stock} setShowButton={setShowButton} id={id}/>
+          <ItemCount stock={stock} setShowButton={setShowButton} setCountQuantity={setCountQuantity} id={id}/>
           :
-          <Link onClick={() => addProductToCart({titulo, volumen, genero, autor, id, imagen, precio})} className='fin-compra' to={`/carrito`} ><span>Agregar al carro</span></Link>}
+          <Link onClick={() => addProductToCart({titulo, volumen, genero, autor, id, imagen, precio, countQuantity})} className='fin-compra' to={`/carrito`} ><span>Agregar al carro</span></Link>}
           
           
       </ul>

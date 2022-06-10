@@ -3,9 +3,7 @@ import './itemcount.css'
 import CartContext from '../Context/CartContext';
 import { useContext } from 'react';
 
-const ItemCount = ({stock, setShowButton, id})=> {
-    const { addQuantity } = useContext(CartContext)
-
+const ItemCount = ({stock, setShowButton, id, setCountQuantity})=> {
     const [count, setCount] = useState(1)
 
     const addCount = ()=>{
@@ -22,7 +20,7 @@ const ItemCount = ({stock, setShowButton, id})=> {
             <div className='total'><span>{count}</span></div>
             <button className='resta' onClick={restCount}>-</button>
             <button className='agregar' onClick={()=>{setShowButton(true)
-            addQuantity({count, id})}}><span>Agregar Cantidad</span></button>
+            setCountQuantity(count)}}><span>Agregar Cantidad</span></button>
         </section>
     )
 }
