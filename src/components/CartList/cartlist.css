@@ -8,6 +8,19 @@
     align-items: center;
 }
 
+.vaciar{
+    position: absolute;
+    background-color: aliceblue;
+    right: 50px;
+    top: 150px;
+    height: 30px;
+    width: 140px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .producto-en-carrito{
     height: 200px;
     width: 700px;

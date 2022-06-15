@@ -1,16 +1,18 @@
 import './cartlist.css'
 import CartContext from '../Context/CartContext'
 import { useContext } from 'react'
+import { ListAlt } from '@mui/icons-material'
 
 const CartLIst = ()=> {
-    const { cartListItems, countQuantity } = useContext(CartContext)
+    const { cartListItems, quitProductFromCart, clearCart } = useContext(CartContext)
     return(
         <section className='carrito'>
+            <div className='vaciar' onClick={() => clearCart()}>VACIAR CARRITO</div>
             {cartListItems.length === 0 && 
                 <span>NO HAY PRODUCTOS EN EL CARRITO</span>
             }
             {cartListItems.map( ( item ) => {
-                   return(
+                return(
                         <div className='producto-en-carrito' key={item.id}>
                             <div className='imagen' style={{backgroundImage:`URL(${item.imagen})`}}></div>
                             <div className='info'>
@@ -20,11 +22,11 @@ const CartLIst = ()=> {
                                     <span>{item.autor}</span>
                                     <span>{item.precio}</span>
                                     <span>{item.countQuantity}</span>
+                                    <span onClick={() => quitProductFromCart(item.id)}>ELIMINAR</span>
                             </div>
                         </div> 
                     )
-                })
-            }
+            })}
         </section>
     )
 }

@@ -6,7 +6,7 @@ import CartContext from '../Context/CartContext';
 import { useContext } from 'react';
 
 const ItemDetail = ({titulo, volumen, genero, stock, autor, id, imagen, precio})=> {
-  const { addProductToCart, addQuantity } = useContext(CartContext)
+  const { addProductToCart } = useContext(CartContext)
   const [showButton, setShowButton] = useState(false)
   const [countQuantity, setCountQuantity] = useState([])
   return (
@@ -19,7 +19,7 @@ const ItemDetail = ({titulo, volumen, genero, stock, autor, id, imagen, precio})
           {!showButton ?
           <ItemCount stock={stock} setShowButton={setShowButton} setCountQuantity={setCountQuantity} id={id}/>
           :
-          <Link onClick={() => addProductToCart({titulo, volumen, genero, autor, id, imagen, precio, countQuantity})} className='fin-compra' to={`/carrito`} ><span>Agregar al carro</span></Link>}
+          <Link onClick={() => addProductToCart({titulo, volumen, genero, autor, id, imagen, precio, stock, countQuantity})} className='fin-compra' to={`/carrito`} ><span>Agregar al carro</span></Link>}
           
           
       </ul>
