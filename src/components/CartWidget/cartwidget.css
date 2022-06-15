@@ -7,7 +7,16 @@
     align-items: center;
     margin-right: 50px;
     font-size: 50px;
+    position: relative;
 }
 .carticon:hover{
     color: #cc3331;
+}
+
+.cantidad{
+    position: absolute;
+    font-size: 20px;
+    color: #cc3331;
+    top: 0;
+    right: 0;
 }

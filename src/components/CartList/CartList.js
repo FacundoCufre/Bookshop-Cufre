@@ -1,15 +1,15 @@
 import './cartlist.css'
 import CartContext from '../Context/CartContext'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom';
 
 
 
 const CartLIst = ()=> {
-    const [refresh, setRefresh] = useState(1)
-    const { cartListItems, quitProductFromCart, clearCart } = useContext(CartContext)
+    const { cartListItems, totalPrice, quitProductFromCart, clearCart } = useContext(CartContext)
     return(
         <section className='carrito'>
-            <div className='vaciar' onClick={() => {clearCart(); setRefresh(refresh + 1)}}>VACIAR CARRITO</div>
+            <div className='vaciar' onClick={() => {clearCart()}}>VACIAR CARRITO</div>
             {cartListItems.length === 0 && 
                 <span>NO HAY PRODUCTOS EN EL CARRITO</span>
             }
@@ -24,11 +24,20 @@ const CartLIst = ()=> {
                                     <span>{item.autor}</span>
                                     <span>{item.precio}</span>
                                     <span>{item.countQuantity}</span>
-                                    <span onClick={() => {quitProductFromCart(item.id); setRefresh(refresh + 1)}}>ELIMINAR</span>
+                                    <span onClick={() => {quitProductFromCart(item.id)}}>ELIMINAR</span>
                             </div>
                         </div> 
                     )
             })}
+            <div className='detalle-compra'>
+                <div className='precio-total'><span>Precio total: $ {totalPrice}</span></div>
+                {cartListItems.length > 0 && 
+                    <div>TERMINAR MI COMPRA</div>
+                }
+                {cartListItems.length === 0 && 
+                    <Link to={'/bookshop-cufre'}>Empezar a comprar</Link>
+                }
+            </div>
         </section>
     )
 }
