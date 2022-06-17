@@ -7,9 +7,8 @@ const NavBar = ()=> {
     <section className="navbar">
       <Link to={'/bookshop-cufre'} className="brand">MangaShop</Link>
       <div className="links">
-        <Link to={`productos/mangas`} className='categoria'><span>Todos</span></Link>
-        <Link to={`productos/top`} className='categoria'><span>Top ventas</span></Link>
-        <Link to={`productos/novedades`} className='categoria'><span>Novedades</span></Link>
+        <Link to={`productos/shonen`} className='categoria'><span>Shonen</span></Link>
+        <Link to={`productos/romance`} className='categoria'><span>Romance</span></Link>
       </div>
       <CartWidget/>
     </section>

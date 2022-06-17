@@ -7,15 +7,7 @@ const Home = () => {
         <>
             <InitialInfo/>
             <section className='portal'>
-                <ItemListContainer category={`mangas`}/>
-            </section>
-
-            <section className='portal'>
-                <ItemListContainer category={`top`}/>
-            </section>
-
-            <section className='portal'>
-                <ItemListContainer category={`novedades`}/>
+                <ItemListContainer/>
             </section>
         </>  
     )

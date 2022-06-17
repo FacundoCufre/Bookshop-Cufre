@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
 .info-inicial{
     height: calc(100vh - 70px);
     width: 100%;
-    background-color: black;
+    background-color: #fffffe;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,6 +13,28 @@
 .bienvenida{
     height: 75%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bienvenida-texto{
+    height: 100%;
+    width: 75%;
+    padding: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Caveat', cursive;
+    font-size: 55px;
+    color: #d24241;
+}
+.bienvenida-fondo{
+    height: 100%;
+    width: 25%;
+    background-image: url(../../utils/img/background.jpg);
+    background-position: center;
+    background-size: contain;
+    opacity: .6;
 }
 
 .datos{
@@ -49,3 +73,4 @@
     font-weight: 700;
     width: 100%;
 }
+

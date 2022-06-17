@@ -28,7 +28,7 @@
         precio: 300,
         autor: 'Masashi Kishimoto',
         genero: 'shonen',
-        imagen: 'https://static.wikia.nocookie.net/naruto/images/b/be/Naruto_Volumen_1.png/revision/latest?cb=20160917231224&path-prefix=es'
+        imagen: 'https://m.media-amazon.com/images/I/61blY+DiS4L._SL500_.jpg'
     },
     {
         titulo: 'Naruto',
