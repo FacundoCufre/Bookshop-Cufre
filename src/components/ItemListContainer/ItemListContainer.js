@@ -5,8 +5,7 @@ const ItemListContainer = ()=> {
   return (
     <section className="container">
       <div className='titulos'>
-        <h2>Mangas</h2>
-        <h3>Todos nuestros productos</h3>
+        <h2>Encuentra tu manga favorito</h2>
       </div>
       <ItemList/>
     </section>

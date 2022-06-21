@@ -8,8 +8,7 @@ const ItemListContainerCategory = ()=> {
   return (
     <section className="container" key={category}>
       <div className='titulos'>
-        <h2>Mangas</h2>
-        <h3>Todos nuestros productos</h3>
+        <h2>Encuentra tu manga favorito</h2>
       </div>
       <ItemListCategory category={category}/>
     </section>

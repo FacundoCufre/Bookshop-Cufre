@@ -24,10 +24,9 @@ const ItemList = ()=> {
     return(
         <section className="itemlist">
         {
-        products.map( ({titulo, volumen, id, precio, genero, stock, imagen})=>{
-            const clase = `item ${genero}` 
+        products.map( ({titulo, volumen, id, precio, stock, imagen})=>{
                 return(
-                    <Item titulo={titulo} volumen={volumen} id={id} precio={precio} clase={clase} cant={stock} imagen={imagen}/>
+                    <Item titulo={titulo} volumen={volumen} id={id} precio={precio} cant={stock} imagen={imagen}/>
                 )
             }
         )

@@ -9,21 +9,29 @@ const InitialInfo = () => {
                 </div>
                 <div className='bienvenida-fondo'></div>
             </div>
-            <div className='datos'>
-                <div className='datos-dato'>
-                    <span>MÁS DE</span>
-                    <span>50 MANGAS</span>
-                    <span>EN COLECCIÓN</span>
+            <div className='decor'>
+                <div className='decor-bloques'>
+                    <div className='bloque1'></div>
+                    
                 </div>
-                <div className='datos-dato'>
-                    <span>MÁS DE</span>
-                    <span>6000</span>
-                    <span>VENTAS</span>
+                <div className='decor-bloques'>
+                    <div className='bloque2'></div>
+                    <div className='bloque3'></div>
+                    <div className='bloque4'></div>
                 </div>
-                <div className='datos-dato'>
-                    <span>ULTIMAS</span>
-                    <span>NOVEDADES</span>
-                    <span>AL DÍA</span>
+                <div className='decor-bloques'>
+                    <div className='bloque5'></div>
+                    <div className='bloque6'></div>
+                </div>
+                <div className='decor-bloques'>
+                    <div className='bloque7'></div>
+                    <div className='bloque8'></div>
+                    <div className='bloque9'></div>
+                    <div className='bloque10'></div>
+                </div>
+                <div className='decor-bloques'>
+                    <div className='bloque11'></div>
+                    <div className='bloque12'></div>
                 </div>
             </div>
         </section>

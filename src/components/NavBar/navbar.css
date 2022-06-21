@@ -53,3 +53,19 @@
     cursor: pointer;
     font-weight: 700;
 }
+
+.menu{
+    top: 70px;
+    height: calc(100% - 70px);
+    width: 100%;
+    position: absolute;
+    background-color: rgba(56, 33, 33, 0.4);
+    z-index: 3;
+    transform: translateY(-120%);
+}
+
+.menu-explorer{
+    height: 75%;
+    width: 100%;
+    background-color: #e6e6e6;
+}

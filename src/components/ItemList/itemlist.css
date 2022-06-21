@@ -1,9 +1,9 @@
 .itemlist{
     display: flex;
     flex-direction: row;
-    height: calc(100% - 120px);
+    height: auto;
     align-items: center;
-    flex-wrap: nowrap;
-    width: 100%;
-    overflow-x: scroll;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
 }

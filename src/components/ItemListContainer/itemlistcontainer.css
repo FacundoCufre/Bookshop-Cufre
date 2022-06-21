@@ -1,5 +1,5 @@
 .container{
-    height: 100%;
+    min-height: 1000px;
     margin: 0;
     margin-bottom: 5px;
     width: 100%;
@@ -12,22 +12,18 @@
 
 .titulos{
     margin-top: 20px;
+    margin-bottom: 30px;
     height: 100px;
-    width: 100%;
+    width: 70%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row;
+    border-bottom: 5px solid #d35349;
 }
 
 .titulos h2{
     font-size: 30px;
     color: #d35349;
-    margin: 0;
-}
-
-.titulos h3{
-    font-size: 16px;
-    color: #e7a8a7;
     margin: 0;
 }
