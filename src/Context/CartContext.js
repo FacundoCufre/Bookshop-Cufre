@@ -31,21 +31,23 @@ const CartProvider = ({children}) => {
             product.countQuantity = product.stock
         }
     }
-console.log(totalProducts)
+
 const quitProductFromCart = (id) => {
     let quitProduct = cartListItems.findIndex(cartItem => cartItem.id === id)
     let productPrice = cartListItems.find(cartItem => cartItem.id === id)
     setTotalPrice(totalPrice - productPrice.precio * productPrice.countQuantity);
     cartListItems.splice(quitProduct, 1)
     setRefresh(refresh + 1)
+    setTotalProducts(totalProducts - productPrice.countQuantity)
 }
 
 const clearCart = () => {
     cartListItems.splice(0, cartListItems.length)
     setRefresh(refresh + 1)
     setTotalPrice(0);
+    setTotalProducts(0);
 }
-console.log(totalPrice)
+
     const data = {
         cartListItems,
         totalPrice,

@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { TextField } from '@mui/material';
 import {addDoc, collection} from 'firebase/firestore'
 import db from '../../utils/firebaseConfig'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartLIst = ()=> {
     const { cartListItems, totalPrice, quitProductFromCart, clearCart } = useContext(CartContext)
@@ -15,7 +17,7 @@ const CartLIst = ()=> {
     
     const handlesubmit = (e)=>{
         e.preventDefault()
-        enviarForm()
+        validarForm()
     }
 
     const [nameChange, setNameChange] = useState('')
@@ -33,10 +35,29 @@ const CartLIst = ()=> {
         setMailChange(e.target.value)
     }
 
+    const validarForm = () => {
+        if(nameChange.length > 3, phoneChange.length >= 6, mailChange.length >= 10){
+            enviarForm()
+        }
+        else{
+            const notify = () => toast.error('Formulario invalido', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+            notify()
+        }
+    }
+
     const enviarForm = () => {
         setShowModal2(true)
         setShowModal(false)
-        setFormValue({...formValue, phone: phoneChange, name: nameChange, mail: mailChange})
+        setFormValue({...formValue, name: nameChange, phone: phoneChange, mail: mailChange})
+        
     }
 
     const [order, setOrder] = useState({})
@@ -78,6 +99,7 @@ const CartLIst = ()=> {
                 )
             }),
             precioFinal: totalPrice}))
+        clearCart()
     }
     
     
@@ -121,9 +143,10 @@ const CartLIst = ()=> {
                         <TextField id="outlined-basic" label="Teléfono" color='warning' variant="outlined" onChange={handleChangePhone}/>
                         <TextField id="outlined-basic" label="Mail" color='warning' variant="outlined" onChange={handleChangeMail}/>
                         <div className='botones-comprador'>
-                            <div>Cancelar</div>
+                            <div onClick={()=> setShowModal(false)}>Cancelar</div>
                             <button type='submit'>Continuar</button>
                         </div>
+                        <ToastContainer/>
                     </form>
                 </div>
             }
@@ -149,7 +172,7 @@ const CartLIst = ()=> {
                             </div>
                         </div>
                         <div className='botones-fin'>
-                            <div className='cancelar-compra'>Cancelar compra</div> 
+                            <div className='cancelar-compra' onClick={()=> setShowModal2(false)}>Cancelar compra</div> 
                             <div className='finalizar-compra' onClick={finalizarCompra}>Finalizar compra</div>
                         </div>
                     </div>

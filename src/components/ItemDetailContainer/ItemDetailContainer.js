@@ -27,7 +27,7 @@ const ItemDetailContainer = () =>{
 
     return(
         <section className="item-detail-container">
-                    <ItemDetail titulo={products.titulo} volumen={products.volumen} stock={products.stock} autor={products.autor} genero={products.genero} id={products.id} imagen={products.imagen} precio={products.precio} />
+                    <ItemDetail titulo={products.titulo} volumen={products.volumen} stock={products.stock} autor={products.autor} genero={products.genero} id={products.id} imagen={products.imagen} precio={products.precio} descripcion={products.descripcion} />
         </section>
     )
 }
