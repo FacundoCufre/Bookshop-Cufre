@@ -3,9 +3,9 @@ import { createContext, useEffect, useState } from "react";
 const CartContext = createContext()
 
 const CartProvider = ({children}) => {
-    const [cartListItems, setCartListItems] = useState([])
-    const [totalPrice, setTotalPrice] = useState(0)
-    const [totalProducts, setTotalProducts] = useState(0)
+    const [cartListItems, setCartListItems] = useState( JSON.parse(localStorage.getItem('productos')) || [])
+    const [totalPrice, setTotalPrice] = useState(JSON.parse(localStorage.getItem('precio')) || 0 )
+    const [totalProducts, setTotalProducts] = useState(JSON.parse(localStorage.getItem('cantidad')) || 0)
     const [refresh, setRefresh] = useState(1)
 
     const addProductToCart = (product) => {
@@ -23,9 +23,16 @@ const CartProvider = ({children}) => {
         }
 
         let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
-        !isInCart && setCartListItems(cartListItems => [...cartListItems, product]);
-        !isInCart && setTotalPrice(totalPrice + product.precio * product.countQuantity);
-        setTotalProducts(totalProducts + product.countQuantity);
+        if(!isInCart){
+            setTotalPrice(totalPrice + product.precio * product.countQuantity);
+            localStorage.setItem('precio', totalPrice + product.precio * product.countQuantity)
+            localStorage.setItem('productos', [JSON.stringify([...cartListItems, product])]);
+            localStorage.setItem('cantidad', totalProducts + product.countQuantity)
+            setTotalProducts(totalProducts + product.countQuantity);
+            return setCartListItems(cartListItems => [...cartListItems, product]);
+        }
+        
+        
         isInCart && addCount();
         if(product.countQuantity == product.stock){
             product.countQuantity = product.stock
@@ -46,6 +53,7 @@ const clearCart = () => {
     setRefresh(refresh + 1)
     setTotalPrice(0);
     setTotalProducts(0);
+    localStorage.clear()
 }
 
     const data = {
