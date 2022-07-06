@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from './pages/Home'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainerCategory from './components/ItemListContainerCategory/ItemListContainerCategory';
-import {CartProvider} from './components/Context/CartContext'
+import {CartProvider} from './Context/CartContext'
 import CartList from './components/CartList/CartList';
 
 

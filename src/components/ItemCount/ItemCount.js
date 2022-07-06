@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import './itemcount.css'
-import CartContext from '../Context/CartContext';
-import { useContext } from 'react';
 
 const ItemCount = ({stock, setShowButton, id, setCountQuantity})=> {
     const [count, setCount] = useState(1)
